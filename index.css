@@ -1,8 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
 .form-greeting,
 .greetings {
   display: none;
 }
 
+body {
+  background-color: black;
+  color: #f2f2f2;
+  margin: 0;
+}
+
+.clock {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.clock h1 {
+  all: unset;
+  font-size: 120px;
+  font-weight: 700;
+  text-shadow: 1px 2px 1px black;
+}
+
+.greetings-container {
+  display: flex;
+  justify-content: center;
+}
+
+.greetings-container .greetings {
+  all: unset;
+  font-size: 50px;
+  font-weight: 600;
+  text-shadow: 1px 2px 1px black;
+}
+
+.greetings-container input {
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  width: 470px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #f3f781;
+}
+
+.todolist-container {
+  width: 470px;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+.todolist-container input {
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  width: 470px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.todolist-container ul {
+  font-size: 20px;
+  font-weight: 600;
+  text-shadow: 2px 2px 1px black;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0;
+  border-radius: 6px;
+}
+
+.todolist-container button {
+  border: 1px solid gray;
+  border-radius: 30%;
+  padding: 0;
+  margin-right: 5px;
+}
+
 .showing {
   display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  animation: fadeIn 0.5s linear;
 }
